@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Container = styled.a`
   border-radius: 5px;
@@ -16,26 +15,26 @@ const Container = styled.a`
     transform: scale(1.05);
     transition: 0.5s ease-out;
   }
-`;
+`
 
 const ImageContainer = styled.img`
   height: 150px;
   width: 100%;
   display: block;
-`;
+`
 
 const TextContainer = styled.div`
   padding: 10px;
   height: 150px;
-`;
+`
 
 const TextTitle = styled.h3`
   color: var(--rich-black);
-`;
+`
 
 const TextDescription = styled.p`
   color: var(--rich-black);
-`;
+`
 
 const TextFade = styled.div`
   background: linear-gradient(0deg, white, transparent);
@@ -43,21 +42,21 @@ const TextFade = styled.div`
   height: 50px;
   position: absolute;
   width: 100%;
-`;
+`
 
 type CardText = {
-  title: string;
-  description: string;
-  linkUrl?: string;
-};
+  title: string
+  description: string
+  linkUrl?: string
+}
 
 type CardProps = {
-  cardText: CardText;
-  imageUrl?: string;
-};
+  cardText: CardText
+  imageUrl?: string
+}
 
 const Card = ({ cardText, imageUrl }: CardProps) => {
-  const { title, description, linkUrl } = cardText;
+  const { title, description, linkUrl } = cardText
   return (
     <Container href={linkUrl}>
       {imageUrl && <ImageContainer src={imageUrl} alt={title}></ImageContainer>}
@@ -67,7 +66,7 @@ const Card = ({ cardText, imageUrl }: CardProps) => {
       </TextContainer>
       <TextFade />
     </Container>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

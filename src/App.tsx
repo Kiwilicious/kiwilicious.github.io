@@ -1,40 +1,39 @@
-import React from "react";
-import styled from "styled-components";
-import Navbar from "./components/Navbar/Navbar";
-import TextCard from "./components/TextCard/Textcard";
+import styled from 'styled-components'
+import Navbar from './components/Navbar/Navbar'
+import TextCard from './components/TextCard/Textcard'
 
-import { projectData } from "./constants/constants";
-import EmailIcon from "./assets/email.svg";
-import GithubIcon from "./assets/github.svg";
-import LinkedinIcon from "./assets/linkedin.svg";
+import { projectData } from './constants/constants'
+import EmailIcon from './assets/email.svg'
+import GithubIcon from './assets/github.svg'
+import LinkedinIcon from './assets/linkedin.svg'
 
-const AppContainer = styled.div``;
+const AppContainer = styled.div``
 
 const AppContent = styled.div`
   margin: 4rem auto;
   padding: 0 1rem;
   width: 60rem;
-`;
+`
 
 const SectionContainer = styled.div`
   margin-bottom: 4rem;
   line-height: 2rem;
-`;
+`
 
 const SectionTitle = styled.h3`
   font-weight: 500;
   text-transform: uppercase;
-`;
+`
 
 const ContactIconsContainer = styled.div`
   display: flex;
-`;
+`
 
 const ContactIcon = styled.a`
   margin-right: 2rem;
   width: 50px;
   height: 50px;
-`;
+`
 
 const App: React.FC = () => {
   return (
@@ -95,7 +94,7 @@ const App: React.FC = () => {
         </SectionContainer>
       </AppContent>
     </AppContainer>
-  );
-};
+  )
+}
 
-export default App;
+export default App

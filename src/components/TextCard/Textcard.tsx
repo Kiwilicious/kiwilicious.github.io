@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface TextCardProps {
-  title: string;
-  description: string;
-  link?: string;
+  title: string
+  description: string
+  link?: string
 }
 
 const TextCardContainer = styled.div`
@@ -13,11 +12,11 @@ const TextCardContainer = styled.div`
   &:last-child {
     padding-bottom: 0px;
   }
-`;
+`
 
 const Link = styled.a`
   color: var(--vista-blue);
-`;
+`
 
 const TextTile = ({ title, description, link }: TextCardProps) => (
   <TextCardContainer>
@@ -34,6 +33,6 @@ const TextTile = ({ title, description, link }: TextCardProps) => (
     </h4>
     <p>{description}</p>
   </TextCardContainer>
-);
+)
 
-export default TextTile;
+export default TextTile
