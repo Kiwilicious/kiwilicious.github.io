@@ -17,7 +17,7 @@ const AnchorLink = styled.a`
   text-decoration: none;
 `
 
-const TextTile: FC<TextCardProps> = ({
+const TextCard: FC<TextCardProps> = ({
   title,
   description,
   repoLink,
@@ -42,4 +42,4 @@ const TextTile: FC<TextCardProps> = ({
   </TextCardContainer>
 )
 
-export default TextTile
+export default TextCard
