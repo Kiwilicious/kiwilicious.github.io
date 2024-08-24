@@ -1,35 +1,42 @@
+import { FC } from 'react'
 import styled from 'styled-components'
+import { ProjectData } from '../constants'
 
-interface TextCardProps {
-  title: string
-  description: string
-  link?: string
-}
+type TextCardProps = ProjectData
 
 const TextCardContainer = styled.div`
-  padding: 0 20px 20px;
+  padding: 0 1rem 1rem;
 
   &:last-child {
     padding-bottom: 0px;
   }
 `
 
-const Link = styled.a`
+const AnchorLink = styled.a`
   color: var(--vista-blue);
+  text-decoration: none;
 `
 
-const TextTile = ({ title, description, link }: TextCardProps) => (
+const TextTile: FC<TextCardProps> = ({
+  title,
+  description,
+  repoLink,
+  projectLink,
+}) => (
   <TextCardContainer>
     <h4>
-      {link && (
+      {title} | &nbsp;
+      {projectLink && (
         <>
-          <Link href={link} target="_blank">
-            Link
-          </Link>
+          <AnchorLink href={projectLink} target="_blank" rel="noreferrer">
+            Project
+          </AnchorLink>
           &nbsp;|&nbsp;
         </>
       )}
-      {title}
+      <AnchorLink href={repoLink} target="_blank" rel="noreferrer">
+        Repo
+      </AnchorLink>
     </h4>
     <p>{description}</p>
   </TextCardContainer>

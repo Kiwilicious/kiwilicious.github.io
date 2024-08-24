@@ -61,11 +61,12 @@ const App: React.FC = () => {
 
         <SectionContainer id="projects">
           <SectionTitle>Projects</SectionTitle>
-          {projectData.map(({ title, description, link }) => (
+          {projectData.map(({ title, description, repoLink, projectLink }) => (
             <TextCard
               title={title}
               description={description}
-              link={link}
+              repoLink={repoLink}
+              projectLink={projectLink}
               key={title}
             />
           ))}
