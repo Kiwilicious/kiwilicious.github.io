@@ -1,13 +1,16 @@
 .nav-link {
   color: var(--arsenic);
   cursor: pointer;
-  font-size: 1.5rem;
   margin-right: 5rem;
   text-transform: uppercase;
+
+  @media (max-width: 1000px) {
+    margin-right: 2rem;
+  }
 }
 
 .active {
   border-bottom: 2px solid var(--arsenic);
   transform: scale(1.05);
-  transition: 500ms all ease-out;
+  transition: 300ms all ease-out;
 }

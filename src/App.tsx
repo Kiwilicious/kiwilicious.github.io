@@ -1,18 +1,25 @@
 import styled from 'styled-components'
-import Navbar from './components/Navbar/Navbar'
-import TextCard from './components/TextCard/Textcard'
+import Navbar from './components/Navbar'
+import TextCard from './components/Textcard'
 
-import { projectData } from './constants/constants'
+import { projectData } from './constants'
 import EmailIcon from './assets/email.svg'
 import GithubIcon from './assets/github.svg'
 import LinkedinIcon from './assets/linkedin.svg'
 
-const AppContainer = styled.div``
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 const AppContent = styled.div`
   margin: 4rem auto;
-  padding: 0 1rem;
-  width: 60rem;
+  max-width: 60rem;
+
+  @media (max-width: 1000px) {
+    padding: 0 2rem;
+  }
 `
 
 const SectionContainer = styled.div`
@@ -51,6 +58,7 @@ const App: React.FC = () => {
             contacts posted below.
           </p>
         </SectionContainer>
+
         <SectionContainer id="projects">
           <SectionTitle>Projects</SectionTitle>
           {projectData.map(({ title, description, link }) => (
@@ -62,6 +70,7 @@ const App: React.FC = () => {
             />
           ))}
         </SectionContainer>
+
         <SectionContainer id="contact">
           <SectionTitle>Contact</SectionTitle>
           <p>

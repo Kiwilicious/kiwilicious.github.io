@@ -1,4 +1,10 @@
-export const projectData = [
+export type ProjectData = {
+  title: string
+  description: string
+  link: string
+}
+
+export const projectData: ProjectData[] = [
   {
     title: 'Map of Japan',
     description:
